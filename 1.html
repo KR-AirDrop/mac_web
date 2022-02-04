@@ -4,6 +4,9 @@
   <title>목표</title>
   <meta charset="utf-8">
   <style>
+  body{
+    margin:0;
+  }
     a {
       color: black;
       text-decoration: none;
@@ -14,24 +17,53 @@
     h1 {
       font-size: 45px;
       text-align: center;
+      border-bottom:2px solid gray;
+      margin:0;
+      padding:20px;
     }
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+    ol {
+      border-right:2px solid gray;
+      width:100px;
+      margin:0;
+      padding:20px;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+    #grid ol{
+      padding-left:33px;
+    }
+    #article{
+      padding-left:25px;
+    }
+    img {
+      width:500px;
+    }
+    @media(max-width:500px){
+      #grid{
+        display: block;
+      }
+      ol {
+        border-right:none;
+      }
+      img {
+        width:100%;
+      }
+    }
   </style>
 </head>
 
 <body>
   <h1><a href="index.html">성혁's 2022 Diary</a></h1>
 
+  <div id="grid">
   <ol>
     <li><a href="1.html" class="active">목표</a></li>
     <li><a href="2.html">일정</a></li>
     <li><a href="3.html">하루 계획</a></li>
   </ol>
-
+    <div id="article">
   <h2>목표</h2>
   <ul>
     <li>1. 웹 백엔드 개발자로 취업</li>
@@ -45,7 +77,8 @@
     <li>3. Opic IM2 목표!</li>
     <li>4. 배달음식 먹지않기!</li>
   </ul>
-
-  <img src="IU_1.jpg" width="50%">
+</div>
+</div>
+  <img src="IU_1.jpg">
 </body>
 </html>
