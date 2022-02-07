@@ -18,6 +18,18 @@
   document.querySelector('body').style.backgroundColor = 'white'
   document.querySelector('body').style.color = 'black'">
 
+  <input type="button" value="Day" onclick="
+  var target = document.querySelector('body');
+  if (this.value === 'Day'){
+  target.style.backgroundColor = 'black'
+  target.style.color = 'white'
+  this.value = 'Night'
+  } else {
+    target.style.backgroundColor = 'white'
+    target.style.color = 'black'
+    this.value = 'Day'
+  }">
+
   <div id="grid">
     <ol>
       <li><a href="1.html">목표</a></li>
